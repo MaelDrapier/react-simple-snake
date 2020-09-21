@@ -1,0 +1,22 @@
+.GameBoard {
+	position: relative;
+	margin: auto;
+    border-style: solid;
+}
+
+.GameBoard .Block {
+		position: absolute;
+}
+
+.GameBoard .GameOver {
+		position: relative;
+		text-align: center;
+}
+
+.GameBoard .Score {
+		position: relative;
+		top: 105%;
+		text-align: center;
+		font-weight: bold;
+}
+
