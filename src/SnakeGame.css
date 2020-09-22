@@ -26,6 +26,7 @@
 .GameBoard .GameOverText {
 	color: #ca0000;
 	font-weight: bold;
+	text-decoration-line: underline;
 }
 
 .GameBoard .PressSpaceText {
