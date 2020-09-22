@@ -312,14 +312,10 @@ class SnakeGame extends React.Component {
 				style={{width: this.state.width, height: this.state.height, borderWidth: this.state.width / 50}}>
 					<div className='GameOver'
 					style={{fontSize: this.state.width / 15}}>
-					<b><u>GAME OVER</u></b>
-					<br/><br/><br/>
-					Your score: {this.state.score}
-					<br/>
-					{this.state.newHighScore ? 'New ' : null}
-					High-score: {this.state.highScore}
-					<br/><br/><br/>
-					<b>Press Space to restart</b>
+					<div class="GameOverText">GAME OVER</div>
+					<div>Your score: {this.state.score}</div>
+					<div>{this.state.newHighScore ? 'New local ' : 'Local '}high score: {this.state.highScore}</div>
+					<div class="PressSpaceText">Press Space to restart</div>
 					</div>
 				</div>
 			);

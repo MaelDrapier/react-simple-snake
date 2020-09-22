@@ -1,22 +1,35 @@
 .GameBoard {
 	position: relative;
 	margin: auto;
-    border-style: solid;
+	border-style: solid;
 }
 
 .GameBoard .Block {
-		position: absolute;
+	position: absolute;
 }
 
 .GameBoard .GameOver {
-		position: relative;
-		text-align: center;
+	text-align: center;
+	height: 100%;
+	flex-direction: column;
+	display: flex;
+	justify-content: space-around;
 }
 
 .GameBoard .Score {
-		position: relative;
-		top: 105%;
-		text-align: center;
-		font-weight: bold;
+	position: relative;
+	top: 105%;
+	text-align: center;
+	font-weight: bold;
+}
+
+.GameBoard .GameOverText {
+	color: #ca0000;
+	font-weight: bold;
+}
+
+.GameBoard .PressSpaceText {
+	color: #2e7ecb;
+	font-weight: bold;
 }
 
