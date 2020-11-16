@@ -1,8 +1,10 @@
 import React from 'react'
 import './SnakeGame.css'
+import GameOver from './GameOver.jsx'
 
 class SnakeGame extends React.Component {
 	constructor(props) {
+		super(props)
 
         // Game size initialization
         let width = this.props.width || window.innerWidth / 2.5
@@ -304,19 +306,12 @@ class SnakeGame extends React.Component {
 	}
 
 	render() {
-        // Game over
+		// Game over
 		if (this.state.isGameOver) {
 			return (
-				<div className='GameBoard'
-				style={{width: this.state.width, height: this.state.height, borderWidth: this.state.width / 50}}>
-					<div className='GameOver'
-					style={{fontSize: this.state.width / 15}}>
-					<div class="GameOverText">GAME OVER</div>
-					<div>Your score: {this.state.score}</div>
-					<div>{this.state.newHighScore ? 'New local ' : 'Local '}high score: {this.state.highScore}</div>
-					<div class="PressSpaceText">Press Space to restart</div>
-					</div>
-				</div>
+					<GameOver width={this.state.width} height={this.state.height}
+						highScore={this.state.highScore} newHighScore={this.state.newHighScore}
+						score={this.state.score}/>
 			);
 		}
 
