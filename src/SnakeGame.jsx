@@ -3,10 +3,9 @@ import './SnakeGame.css'
 
 class SnakeGame extends React.Component {
 	constructor(props) {
-		super(props)
 
         // Game size initialization
-        let width = window.innerWidth / 2.5
+        let width = this.props.width || window.innerWidth / 2.5
         width -= width % 30
         if (width < 180)
             width = 180
@@ -15,7 +14,7 @@ class SnakeGame extends React.Component {
         let blockHeight = height / 20
 
         // snake initialization
-        let startSnakeSize = this.props.startSnakeSize || 6
+		let startSnakeSize = this.props.startSnakeSize || 6
 		let snake = []
 		let Xpos = width / 2
 		let Ypos = height / 2
@@ -49,8 +48,8 @@ class SnakeGame extends React.Component {
 			direction: 'right',
 			directionChanged: false,
 			isGameOver: false,
-			snakeColor: this.getRandomColor(),
-			appleColor: this.getRandomColor(),
+			snakeColor: this.props.snakeColor || this.getRandomColor(),
+			appleColor: this.props.appleColor || this.getRandomColor(),
 			score: 0,
 			highScore: Number(localStorage.getItem('snakeHighScore')) || 0,
 			newHighScore: false
