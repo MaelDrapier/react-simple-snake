@@ -5,6 +5,13 @@ import './index.css'
 
 ReactDOM.render(
   <React.StrictMode>
+    <h1>React-Snake</h1>
+    <div className="textWrapper">
+      <p id="instructions">Use the arrow keys or Z/Q/S/D to play</p>
+      <p className="subTitle">A simple snake game created with the
+      <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer"> React </a>
+      framework</p>
+    </div>
     <SnakeGame />
   </React.StrictMode>,
   document.getElementById('root')

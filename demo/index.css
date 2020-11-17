@@ -5,4 +5,33 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  font-size: max(24px, 3.5vw);
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+a, a:visited {
+  color: rgb(86, 148, 240);
+  text-decoration: none;
+}
+
+.textWrapper {
+  margin-left: 18%;
+  margin-right: 18%;
+}
+
+.subTitle {
+  font-size: 12px;
+  font-size: max(12px, 1.2vw);
+}
+
+#instructions {
+  color: rgb(172, 172, 172);
+  font-size: 10px;
+  font-size: max(10px, 1vw);
 }
