@@ -9,13 +9,13 @@
   ],
   "license": "MIT",
   "author": {
-    "name": "Maël Drapier"
+    "name": "MaelDrapier"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/MaelDrapier/react-simple-snake.git"
   },
-  "homepage": "https://github.com/MaelDrapier/react-simple-snake",
+  "homepage": "https://MaelDrapier.github.io/react-simple-snake",
   "dependencies": {},
   "peerDependencies": {
     "react": "^17.0.1",
@@ -25,6 +25,8 @@
     "start": "webpack serve --config=demo/webpack.config.js",
     "build:demo": "webpack --config=demo/webpack.config.js",
     "build:lib": "webpack",
+    "predeploy": "npm run build:demo",
+    "deploy": "gh-pages -d demo/public",
     "prepack": "npm run build:lib"
   },
   "devDependencies": {
@@ -34,6 +36,7 @@
     "@babel/preset-react": "^7.12.5",
     "babel-loader": "^8.2.1",
     "css-loader": "^5.0.1",
+    "gh-pages": "^3.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "style-loader": "^2.0.0",
