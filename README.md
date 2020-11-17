@@ -13,6 +13,7 @@ A simple snake game created with the [React](https://reactjs.org) framework.
 - [Usage](#usage)
   - [To import it in your component](#to-import-it-in-your-component)
   - [Props](#props)
+- [How to play](#how-to-play)
 - [High-Score](#high-score)
 
 <br/>
@@ -67,6 +68,11 @@ _All props are optional_
 |`startSnakeSize`|number|`6`|The starting size of the snake|
 |`snakeColor`|string|_random_|The color of the snake|
 |`appleColor`|string|_random_|The color of apples|
+
+<br/>
+
+## How to play
+You can move the snake with the arrow keys or `W` / `A` / `S` / `D`.
 
 <br/>
 
