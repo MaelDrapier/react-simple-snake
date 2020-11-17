@@ -2,7 +2,6 @@
   "name": "react-simple-snake",
   "description": "A simple snake game created with the React JS framework",
   "version": "0.1.0",
-  "private": true,
   "main": "lib/snake.js",
   "files": [
     "lib"
