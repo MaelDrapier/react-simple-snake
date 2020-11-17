@@ -7,6 +7,7 @@ A simple snake game created with the [React](https://reactjs.org) framework.
 
 - [Demo](#demo)
 - [Installation](#installation)
+  - [To add it to your React app](#to-add-it-to-your-react-app)
   - [To launch the development server](#to-launch-the-development-server)
 - [Dependencies](#dependencies)
 - [Usage](#usage)
