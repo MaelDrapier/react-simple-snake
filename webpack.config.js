@@ -1,20 +1,20 @@
 var nodeExternals = require('webpack-node-externals');
-var path = require('path')
+var path = require('path');
 
 module.exports = {
     mode: 'production',
     target: 'node',
-    // externals: [nodeExternals()],
-    entry: './src/SnakeGame.jsx',
+    externals: [nodeExternals()],
+    entry: path.join(__dirname, 'src', 'SnakeGame.jsx'),
 	output: {
-        path: path.resolve('dist'),
-        filename: 'react-snake.js',
+        path: path.resolve('lib'),
+        filename: 'snake.js',
         libraryTarget: 'commonjs2',
-	},
+    },
 	module: {
 		rules: [
 			{
-                test: /\.jsx?$/,
+                test: /\.(js|jsx)?$/,
                 exclude: /(node_modules)/,
                 use: "babel-loader"
 			},
