@@ -21,7 +21,7 @@
     "type": "git",
     "url": "https://github.com/MaelDrapier/react-simple-snake.git"
   },
-  "homepage": "https://MaelDrapier.github.io/react-simple-snake",
+  "homepage": "https://maeldrapier.github.io/react-simple-snake",
   "dependencies": {},
   "peerDependencies": {
     "react": "^17.0.1",
