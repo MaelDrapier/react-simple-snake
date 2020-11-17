@@ -268,10 +268,10 @@ class SnakeGame extends React.Component {
 			return;
 
 		switch (event.keyCode) {
-			case 37: case 81:
+			case 37: case 65:
 				this.goLeft()
 				break
-			case 38: case 90:
+			case 38: case 87:
 				this.goUp()
 				break
 			case 39: case 68:
