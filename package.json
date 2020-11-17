@@ -11,6 +11,12 @@
     "name": "maeldrapier",
     "email": "mael.drapier@gmail.com"
   },
+  "keywords": [
+    "react",
+    "snake",
+    "game",
+    "simple"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/MaelDrapier/react-simple-snake.git"
