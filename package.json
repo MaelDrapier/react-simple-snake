@@ -1,14 +1,15 @@
 {
   "name": "react-simple-snake",
   "description": "A simple snake game created with the React JS framework",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "main": "lib/snake.js",
   "files": [
     "lib"
   ],
   "license": "MIT",
   "author": {
-    "name": "MaelDrapier"
+    "name": "maeldrapier",
+    "email": "mael.drapier@gmail.com"
   },
   "repository": {
     "type": "git",
