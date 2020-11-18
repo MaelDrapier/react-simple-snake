@@ -2,6 +2,7 @@
 [![GitHub](https://img.shields.io/github/license/MaelDrapier/react-simple-snake)](https://github.com/MaelDrapier/react-simple-snake/blob/master/LICENSE)
 [![npm](https://img.shields.io/npm/v/react-simple-snake?color=blue)](https://www.npmjs.com/package/react-simple-snake)
 [![npm peer dependency version](https://img.shields.io/npm/dependency-version/react-simple-snake/peer/react?color=cyan)](https://www.npmjs.com/package/react)
+[![npm](https://img.shields.io/npm/dm/react-simple-snake)](https://www.npmjs.com/package/react-simple-snake)
 
 A simple snake game created with the [React](https://reactjs.org) framework.
 
