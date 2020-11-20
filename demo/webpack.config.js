@@ -26,7 +26,9 @@ module.exports = {
         host: 'localhost',
         port: port,
         historyApiFallback: true,
-        open: true
+        open: true,
+        transportMode: 'ws',
+        injectClient: false
       },
     devtool: 'inline-source-map'
 }
