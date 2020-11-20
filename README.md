@@ -65,7 +65,7 @@ _All props are optional_
 
 |Prop|Type|Default value|Description|
 |:-:|:-:|:-:|:-|
-|`width`|number|`window.innerWidth / 2.5`|The width of the game board, must be > 180|
+|`percentageWidth`|number|`40`|A **percentage** defining the width of the game board, based on the width of the game's parent element|
 |`startSnakeSize`|number|`6`|The starting size of the snake|
 |`snakeColor`|string|_random_|The color of the snake|
 |`appleColor`|string|_random_|The color of apples|
