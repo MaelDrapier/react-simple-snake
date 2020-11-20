@@ -4,7 +4,7 @@
 [![npm peer dependency version](https://img.shields.io/npm/dependency-version/react-simple-snake/peer/react?color=cyan)](https://www.npmjs.com/package/react)
 [![npm](https://img.shields.io/npm/dm/react-simple-snake)](https://www.npmjs.com/package/react-simple-snake)
 
-A simple snake game created with the [React](https://reactjs.org) framework.
+A simple snake game created with the [React](https://reactjs.org) JavaScript library.
 
 - [Demo](#demo)
 - [Installation](#installation)
