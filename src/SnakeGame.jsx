@@ -355,7 +355,7 @@ class SnakeGame extends React.Component {
 
     return (
       <div
-        className='GameBoard'
+        id='GameBoard'
         style={{
           width: this.state.width,
           height: this.state.height,
@@ -386,7 +386,7 @@ class SnakeGame extends React.Component {
             background: this.state.appleColor,
           }}
         />
-        <div className='Score' style={{ fontSize: this.state.width / 20 }}>
+        <div id='Score' style={{ fontSize: this.state.width / 20 }}>
           HIGH-SCORE: {this.state.highScore}&ensp;&ensp;&ensp;&ensp;SCORE:{' '}
           {this.state.score}
         </div>
