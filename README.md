@@ -20,6 +20,8 @@ A simple snake game created with the [React](https://reactjs.org) framework.
 <br/>
 
 ## Demo
+[![Website](https://img.shields.io/website?label=demo%20status%3A&url=https%3A%2F%2Fmaeldrapier.github.io%2Freact-simple-snake%2F)](https://MaelDrapier.github.io/react-simple-snake)
+
 A demo is available [here](https://MaelDrapier.github.io/react-simple-snake).
 
 <br/>
