@@ -6,10 +6,41 @@ class SnakeGame extends React.Component {
   constructor(props) {
     super(props)
 
+    this.handleKeyDown = this.handleKeyDown.bind(this)
+
+    this.state = {
+      width: 0,
+      height: 0,
+      blockWidth: 0,
+      blockHeight: 0,
+      gameLoopTimeout: 50,
+      timeoutId: 0,
+      startSnakeSize: 0,
+      snake: [],
+      apple: {},
+      direction: 'right',
+      directionChanged: false,
+      isGameOver: false,
+      snakeColor: this.props.snakeColor || this.getRandomColor(),
+      appleColor: this.props.appleColor || this.getRandomColor(),
+      score: 0,
+      highScore: Number(localStorage.getItem('snakeHighScore')) || 0,
+      newHighScore: false,
+    }
+  }
+
+  componentDidMount() {
+    this.initGame()
+    window.addEventListener('keydown', this.handleKeyDown)
+    this.gameLoop()
+  }
+
+  initGame() {
     // Game size initialization
-    let width = this.props.width || window.innerWidth / 2.5
+    let percentageWidth = this.props.percentageWidth || 40
+    let width = document.getElementById('GameBoard').parentElement.offsetWidth * (percentageWidth / 100)
     width -= width % 30
-    if (width < 180) width = 180
+    if (width < 30) width = 30
     let height = (width / 3) * 2
     let blockWidth = width / 30
     let blockHeight = height / 20
@@ -40,32 +71,15 @@ class SnakeGame extends React.Component {
         blockHeight
     }
 
-    this.handleKeyDown = this.handleKeyDown.bind(this)
-
-    this.state = {
+    this.setState({
       width,
       height,
       blockWidth,
       blockHeight,
-      gameLoopTimeout: 50,
-      timeoutId: 0,
       startSnakeSize,
       snake,
       apple: { Xpos: appleXpos, Ypos: appleYpos },
-      direction: 'right',
-      directionChanged: false,
-      isGameOver: false,
-      snakeColor: this.props.snakeColor || this.getRandomColor(),
-      appleColor: this.props.appleColor || this.getRandomColor(),
-      score: 0,
-      highScore: Number(localStorage.getItem('snakeHighScore')) || 0,
-      newHighScore: false,
-    }
-  }
-
-  componentDidMount() {
-    window.addEventListener('keydown', this.handleKeyDown)
-    this.gameLoop()
+    })
   }
 
   gameLoop() {
