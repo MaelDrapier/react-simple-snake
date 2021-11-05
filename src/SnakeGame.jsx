@@ -146,8 +146,8 @@ class SnakeGame extends React.Component {
       directionChanged: false,
       isGameOver: false,
       gameLoopTimeout: 50,
-      snakeColor: this.getRandomColor(),
-      appleColor: this.getRandomColor(),
+      snakeColor: this.props.snakeColor || this.getRandomColor(),
+      appleColor: this.props.appleColor || this.getRandomColor(),
       score: 0,
       newHighScore: false,
     })
