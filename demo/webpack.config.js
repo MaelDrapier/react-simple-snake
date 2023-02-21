@@ -28,7 +28,8 @@ module.exports = {
         historyApiFallback: true,
         open: true,
         transportMode: 'ws',
-        injectClient: false
+        injectClient: false,
+        disableHostCheck: true
       },
     devtool: 'inline-source-map'
 }

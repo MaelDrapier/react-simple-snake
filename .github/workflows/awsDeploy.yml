@@ -33,7 +33,7 @@ on:
 env:
   AWS_REGION: us-east-1                   # set this to your preferred AWS region, e.g. us-west-1
   ECR_REPOSITORY: snake-game           # set this to your Amazon ECR repository name
-  ECS_SERVICE: service-snake-game                 # set this to your Amazon ECS service name
+  ECS_SERVICE: service-snake-game-lb                 # set this to your Amazon ECS service name
   ECS_CLUSTER: snake-game                 # set this to your Amazon ECS cluster name
   ECS_TASK_DEFINITION: ./task-definition-snake-game.json # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
