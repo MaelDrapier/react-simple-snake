@@ -29,7 +29,9 @@ module.exports = {
         open: true,
         transportMode: 'ws',
         injectClient: false,
-        disableHostCheck: true
+        allowedHosts: [
+            '.amazonaws.com'
+        ]
       },
     devtool: 'inline-source-map'
 }
