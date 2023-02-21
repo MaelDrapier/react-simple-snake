@@ -35,7 +35,7 @@ env:
   ECR_REPOSITORY: snake-game           # set this to your Amazon ECR repository name
   ECS_SERVICE: service-snake-game                 # set this to your Amazon ECS service name
   ECS_CLUSTER: snake-game                 # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: task-definition-snake-game # set this to the path to your Amazon ECS task definition
+  ECS_TASK_DEFINITION: ./task-definition-snake-game.json # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
   CONTAINER_NAME: snake-game-container           # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
