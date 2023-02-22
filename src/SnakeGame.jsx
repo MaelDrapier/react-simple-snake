@@ -1,6 +1,7 @@
-import React from 'react'
-import './SnakeGame.css'
-import GameOver from './GameOver.jsx'
+import React from 'react';
+import GameOver from './GameOver.jsx';
+
+
 
 class SnakeGame extends React.Component {
   constructor(props) {
@@ -21,26 +22,28 @@ class SnakeGame extends React.Component {
       direction: 'right',
       directionChanged: false,
       isGameOver: false,
-      snakeColor: this.props.snakeColor || this.getRandomColor(),
-      appleColor: this.props.appleColor || this.getRandomColor(),
+      snakeColor: this.props.snakeColor || this.getSnakeColor(),
+      appleColor: this.props.appleColor || this.getAppleColor(),
       score: 0,
-      highScore: Number(localStorage.getItem('snakeHighScore')) || 0,
+      highScore: typeof window !== 'undefined' ? Number(localStorage.getItem('snakeHighScore')) || 0 : 0,
       newHighScore: false,
     }
   }
 
   componentDidMount() {
     this.initGame()
-    window.addEventListener('keydown', this.handleKeyDown)
+    if(typeof window !== 'undefined') {
+      window.addEventListener('keydown', this.handleKeyDown)
+    }
     this.gameLoop()
   }
 
   initGame() {
     // Game size initialization
     let percentageWidth = this.props.percentageWidth || 40
-    let width =
+    let width = typeof document !== "undefined" ?
       document.getElementById('GameBoard').parentElement.offsetWidth *
-      (percentageWidth / 100)
+      (percentageWidth / 100) : 1000
     width -= width % 30
     if (width < 30) width = 30
     let height = (width / 3) * 2
@@ -101,7 +104,9 @@ class SnakeGame extends React.Component {
 
   componentWillUnmount() {
     clearTimeout(this.state.timeoutId)
-    window.removeEventListener('keydown', this.handleKeyDown)
+    if (typeof window !== 'undefined'){
+      window.removeEventListener('keydown', this.handleKeyDown)
+    }
   }
 
   resetGame() {
@@ -146,18 +151,19 @@ class SnakeGame extends React.Component {
       directionChanged: false,
       isGameOver: false,
       gameLoopTimeout: 50,
-      snakeColor: this.getRandomColor(),
-      appleColor: this.getRandomColor(),
+      snakeColor: getSnakeColor(),
+      appleColor: getAppleColor(),
       score: 0,
       newHighScore: false,
     })
   }
 
-  getRandomColor() {
-    let hexa = '0123456789ABCDEF'
-    let color = '#'
-    for (let i = 0; i < 6; i++) color += hexa[Math.floor(Math.random() * 16)]
-    return color
+  getSnakeColor() {
+    return '#f28f93'
+  }
+
+  getAppleColor(){
+    return '#ad74ce'
   }
 
   moveSnake() {
@@ -216,7 +222,9 @@ class SnakeGame extends React.Component {
       // increment high score if needed
       if (this.state.score === highScore) {
         highScore++
-        localStorage.setItem('snakeHighScore', highScore)
+        if(typeof window !== 'undefined'){
+          localStorage.setItem('snakeHighScore', highScore)
+        }
         newHighScore = true
       }
 
