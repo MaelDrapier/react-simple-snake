@@ -37,7 +37,7 @@
     "deploy": "gh-pages -d demo/public",
     "prepack": "npm run build:lib",
     "lint": "eslint src/*.jsx --fix",
-    "test": "jest"
+    "test": "jest --forceExit"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
