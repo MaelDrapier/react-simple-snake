@@ -24,7 +24,7 @@ class SnakeGame extends React.Component {
       isGameOver: false,
       snakeColor: this.props.snakeColor || this.getSnakeColor(),
       appleColor: this.props.appleColor || this.getAppleColor(),
-      score: 1,
+      score: 0,
       highScore: typeof window !== 'undefined' ? Number(localStorage.getItem('snakeHighScore')) || 0 : 0,
       newHighScore: false,
     }
