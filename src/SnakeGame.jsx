@@ -159,7 +159,7 @@ class SnakeGame extends React.Component {
   }
 
   getSnakeColor() {
-    return '#FF5733'
+    return '#3E7F18'
   }
 
   getAppleColor(){
